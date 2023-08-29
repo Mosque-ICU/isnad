@@ -1,5 +1,4 @@
 import { Card, Title, Text } from '@tremor/react';
-import { queryBuilder } from '../lib/planetscale';
 import Search from './search';
 import UsersTable from './table';
 import HadithView from './components/hadithView/HadithView';
@@ -18,5 +17,5 @@ export default async function IndexPage({
   //   .where('name', 'like', `%${search}%`)
   //   .execute();
 
-  return <HadithView currentSelection={undefined} />;
+  return <HadithView />;
 }

@@ -4,11 +4,12 @@ import { Analytics } from '@vercel/analytics/react';
 import Nav from './nav';
 import Toast from './toast';
 import { Suspense } from 'react';
+import LeftSideBar from './components/leftSidebar/LeftSideBar';
 
 export const metadata = {
-  title: 'Next.js 13 + PlanetScale + NextAuth + Tailwind CSS',
+  title: 'Isnad | Hadith Collection',
   description:
-    'A user admin dashboard configured with Next.js, PlanetScale, NextAuth, Tailwind CSS, TypeScript, ESLint, and Prettier.'
+    'A collection of Hadiths from Sahih Bukhari, Sahih Muslim, Sunan Abu Dawud, Sunan Ibn Majah, Sunan al-Tirmidhi, and Sunan al-Nasa’i.'
 };
 
 export default async function RootLayout({
@@ -22,7 +23,7 @@ export default async function RootLayout({
         <Suspense>
           <Nav />
         </Suspense>
-        {children}
+        <LeftSideBar>{children}</LeftSideBar>
         <Analytics />
         <Toast />
       </body>

@@ -20,7 +20,12 @@ const initNodes = [
   {
     id: '1',
     type: 'custom',
-    data: { name: 'Muhammad (ﷺ)', designation: 'Prophet of Allah', icon: '' },
+    data: {
+      name: 'Muhammad (ﷺ)',
+      designation: 'Prophet of Allah',
+      icon: '',
+      id: 1
+    },
     position: { x: 0, y: 0 }
   },
   {

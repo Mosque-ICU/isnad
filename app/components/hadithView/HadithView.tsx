@@ -1,40 +1,44 @@
 'use client';
 import { Title, Card, Text, Badge } from '@tremor/react';
+import { usePathname } from 'next/navigation';
 
 import React, { Suspense } from 'react';
 import Search from '../../search';
 import UsersTable from '../../table';
-import LeftSideBar from '../leftSidebar/LeftSideBar';
 import IsnadViewer from '../IsnadViewer/IsnadViewer';
 import Loading from './loading';
 
 function HadithView() {
+  const path = usePathname();
+
   const [currentSelection, setCurrentSelection] = React.useState<any>(null);
   const [showIsnadView, setShowIsnadView] = React.useState(false);
 
   const [currentData, setCurrentData] = React.useState<any>([]) as any;
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    if (currentSelection) {
-      //sunnah.coms api blocks requests from another site domain but allows localhost
-      return setCurrentData(hadithData);
+    if (!path) return setLoading(false);
+    const urlSplit = path.split('/');
+    const collectionId = urlSplit[1];
+    const bookId = urlSplit[2];
+    if (!collectionId && !bookId) return setLoading(false);
 
-      if (process.env.NODE_ENV === 'production') setLoading(true);
-      fetch(
-        `http://localhost:3000/api/scrape?site=https://sunnah.com/bukhari/1&currentBook=1`
-      ).then((res) => {
+    fetch(`/api/hadith?collectionId=${'1'}&bookId=${bookId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCurrentData(data);
         setLoading(false);
-
-        res.json().then((data) => {
-          setCurrentData(data);
-        });
       });
-    }
-  }, [currentSelection]);
+  }, [path]);
 
   return (
-    <LeftSideBar setCurrentSelection={setCurrentSelection}>
+    <>
       {loading && <Loading />}
       <main className="mx-auto w-full ">
         <div className="flex flex-row w-full">
@@ -63,7 +67,7 @@ function HadithView() {
           <UsersTable users={[]} />
         </Card> */}
       </main>
-    </LeftSideBar>
+    </>
   );
 }
 
