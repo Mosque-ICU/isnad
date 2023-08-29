@@ -32,7 +32,7 @@ function HadithView() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setCurrentData(data);
+        if (!data.errors) setCurrentData(data);
         setLoading(false);
       });
   }, [path]);

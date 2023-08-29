@@ -1,3 +1,4 @@
+'use client';
 import React, { Suspense, useCallback } from 'react';
 import ReactFlow, {
   useNodesState,

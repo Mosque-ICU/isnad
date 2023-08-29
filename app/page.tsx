@@ -1,6 +1,3 @@
-import { Card, Title, Text } from '@tremor/react';
-import Search from './search';
-import UsersTable from './table';
 import HadithView from './components/hadithView/HadithView';
 
 export const dynamic = 'force-dynamic';
@@ -10,7 +7,6 @@ export default async function IndexPage({
 }: {
   searchParams: { q: string };
 }) {
-  const search = searchParams.q ?? '';
   // const users = await queryBuilder
   //   .selectFrom('users')
   //   .select(['id', 'name', 'username', 'email'])
