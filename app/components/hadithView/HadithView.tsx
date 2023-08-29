@@ -1,7 +1,7 @@
 'use client';
 import { Title, Card, Text, Badge } from '@tremor/react';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Search from '../../search';
 import UsersTable from '../../table';
 import LeftSideBar from '../leftSidebar/LeftSideBar';
@@ -51,7 +51,9 @@ function HadithView() {
             ))}
           </div>
           {showIsnadView && (
-            <IsnadViewer close={() => setShowIsnadView(false)} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <IsnadViewer close={() => setShowIsnadView(false)} />
+            </Suspense>
           )}
         </div>
         {/* <Card className="mt-6">

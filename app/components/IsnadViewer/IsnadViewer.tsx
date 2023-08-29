@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { Suspense, useCallback } from 'react';
 import ReactFlow, {
   useNodesState,
   useEdgesState,
