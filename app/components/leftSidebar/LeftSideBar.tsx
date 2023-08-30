@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 
 function LeftSideBar({ children, setCurrentSelection }: any) {
+  const [showSidebar, setShowSidebar] = React.useState(true);
   const [showMobileSidebar, setShowMobileSidebar] = React.useState(false);
   const router = useRouter();
 
@@ -16,31 +17,42 @@ function LeftSideBar({ children, setCurrentSelection }: any) {
   return (
     <>
       <div className=" h-[calc(100vh-53px)] hidden md:flex">
-        <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row ">
-          <div
-            className="  w-[60px] border border-gray-100 
+        {showSidebar ? (
+          <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row relative">
+            <Bars3Icon
+              className="absolute top-2 right-2 w-5 h-5 text-gray-600 cursor-pointer z-50"
+              onClick={() => setShowSidebar(false)}
+            />
+            <div
+              className="  w-[60px] border border-gray-100 
             "
-          ></div>
+            ></div>
 
-          <div className="flex50lex-col w-full p-5 mt-2">
-            <p
-              className="mb-4 font-semibold text-lg
+            <div className="flex50lex-col w-full p-5 mt-2">
+              <p
+                className="mb-4 font-semibold text-lg
           "
-            >
-              Hadith Collections
-            </p>
-            {hadithData.map((hadith) => (
-              <HadithCollection
-                key={hadith.id}
-                hadith={hadith}
-                setCurrentSelection={setCurrentSelection}
-                navigate={(slug, bookId) =>
-                  router.push(`/${hadith.slug}/${bookId}`)
-                }
-              />
-            ))}
+              >
+                Hadith Collections
+              </p>
+              {hadithData.map((hadith) => (
+                <HadithCollection
+                  key={hadith.id}
+                  hadith={hadith}
+                  setCurrentSelection={setCurrentSelection}
+                  navigate={(slug, bookId) =>
+                    router.push(`/${hadith.slug}/${bookId}`)
+                  }
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <Bars3Icon
+            className="fixed top-[50px] left-2 w-5 h-5 text-gray-600 z-50 cursor-pointer "
+            onClick={() => setShowSidebar(true)}
+          />
+        )}
         {children}
       </div>
 
@@ -49,7 +61,7 @@ function LeftSideBar({ children, setCurrentSelection }: any) {
           <div className="absolute top-0 left-0 w-full h-full bg-white shadow-sm z-50 slieLeft">
             <XMarkIcon
               className="absolute top-2 right-2 w-5 h-5 text-gray-600"
-              onClick={() => setShowMobileSidebar(false)}
+              onClick={() => setShowSidebar(false)}
             />
 
             <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row ">
