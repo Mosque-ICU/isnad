@@ -83,13 +83,13 @@ const HadithContent = ({ hadith, setShowIsnadView }: any) => {
         {hadith.primaryNarrator} ( {hadith?.primaryNarratorEn} )
         {/* narrates: */}
       </p>
-      <div className="flex flex-row justify-between mt-3">
+      <div className="flex md:flex-row flex-col justify-between mt-3">
         <p
           dangerouslySetInnerHTML={{ __html: hadith.englishTrans }}
           className="text-gray-700"
         ></p>{' '}
         <p
-          className="text-gray-700 text-[21px] ml-3"
+          className="text-gray-700 text-[21px] md:ml-0 ml-3 mt-5 md:mt-0"
           dir="rtl"
           dangerouslySetInnerHTML={{ __html: hadith.arabic }}
         ></p>

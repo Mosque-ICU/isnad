@@ -23,6 +23,7 @@ export default async function RootLayout({
         <Suspense>
           <Nav />
         </Suspense>
+
         <LeftSideBar>{children}</LeftSideBar>
         <Analytics />
         <Toast />

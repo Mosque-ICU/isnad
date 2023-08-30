@@ -1,40 +1,94 @@
 'use client';
 
+import {
+  Bars3Icon,
+  MegaphoneIcon,
+  XMarkIcon
+} from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
 function LeftSideBar({ children, setCurrentSelection }: any) {
+  const [showMobileSidebar, setShowMobileSidebar] = React.useState(false);
   const router = useRouter();
 
+  //hide sidebar on mobile
   return (
-    <div className="flex h-[calc(100vh-53px)] ">
-      <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row ">
-        <div
-          className="  w-[60px] border border-gray-100 
+    <>
+      <div className=" h-[calc(100vh-53px)] hidden md:flex">
+        <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row ">
+          <div
+            className="  w-[60px] border border-gray-100 
             "
-        ></div>
+          ></div>
 
-        <div className="flex flex-col w-full p-5 mt-2">
-          <p
-            className="mb-4 font-semibold text-lg
+          <div className="flex50lex-col w-full p-5 mt-2">
+            <p
+              className="mb-4 font-semibold text-lg
           "
-          >
-            Hadith Collections
-          </p>
-          {hadithData.map((hadith) => (
-            <HadithCollection
-              key={hadith.id}
-              hadith={hadith}
-              setCurrentSelection={setCurrentSelection}
-              navigate={(slug, bookId) =>
-                router.push(`/${hadith.slug}/${bookId}`)
-              }
-            />
-          ))}
+            >
+              Hadith Collections
+            </p>
+            {hadithData.map((hadith) => (
+              <HadithCollection
+                key={hadith.id}
+                hadith={hadith}
+                setCurrentSelection={setCurrentSelection}
+                navigate={(slug, bookId) =>
+                  router.push(`/${hadith.slug}/${bookId}`)
+                }
+              />
+            ))}
+          </div>
         </div>
+        {children}
       </div>
-      {children}
-    </div>
+
+      <div className="md:hidden relative  h-[calc(100vh-53px)]">
+        {showMobileSidebar ? (
+          <div className="absolute top-0 left-0 w-full h-full bg-white shadow-sm z-50 slieLeft">
+            <XMarkIcon
+              className="absolute top-2 right-2 w-5 h-5 text-gray-600"
+              onClick={() => setShowMobileSidebar(false)}
+            />
+
+            <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row ">
+              <div
+                className="  w-[60px] border border-gray-100 
+            "
+              ></div>
+
+              <div className="flex50lex-col w-full p-5 mt-2">
+                <p
+                  className="mb-4 font-semibold text-lg
+          "
+                >
+                  Hadith Collections
+                </p>
+                {hadithData.map((hadith) => (
+                  <HadithCollection
+                    key={hadith.id}
+                    hadith={hadith}
+                    setCurrentSelection={setCurrentSelection}
+                    navigate={(slug, bookId) => {
+                      router.push(`/${hadith.slug}/${bookId}`);
+                      setShowMobileSidebar(false);
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <Bars3Icon
+            className="fixed top-[50px] left-2 w-5 h-5 text-gray-600 z-50"
+            onClick={() => setShowMobileSidebar(true)}
+          />
+        )}
+
+        {children}
+      </div>
+    </>
   );
 }
 

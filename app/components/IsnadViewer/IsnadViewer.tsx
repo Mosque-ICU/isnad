@@ -1,5 +1,5 @@
 'use client';
-import React, { Suspense, useCallback } from 'react';
+import React, { Fragment, Suspense, useCallback } from 'react';
 import ReactFlow, {
   useNodesState,
   useEdgesState,
@@ -12,6 +12,8 @@ import ReactFlow, {
 import 'reactflow/dist/base.css';
 
 import CustomNode from './CustomNode';
+import { Transition, Dialog } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 
 const nodeTypes = {
   custom: CustomNode
@@ -141,27 +143,82 @@ const IsnadViewer = ({ close }) => {
   );
 
   return (
-    <div className="w-full h-screen border-l border-gray-100  border-t slideLeft">
-      <p
-        className="absolute top-[50px] right-4 cursor-pointer z-50"
-        onClick={close}
-      >
-        X
-      </p>
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        nodeTypes={nodeTypes}
-        fitView
-        className="bg-white"
-      >
-        <MiniMap />
-        <Controls />
-      </ReactFlow>
-    </div>
+    <>
+      <div className="w-full h-screen border-l border-gray-100  border-t slideLeft hidden md:block">
+        <p
+          className="absolute top-[50px] right-4 cursor-pointer z-50"
+          onClick={close}
+        >
+          X
+        </p>
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          onConnect={onConnect}
+          nodeTypes={nodeTypes}
+          fitView
+          className="bg-white"
+        >
+          <MiniMap />
+          <Controls />
+        </ReactFlow>
+      </div>
+
+      <div className="md:hidden">
+        <Transition appear show={true} as={Fragment}>
+          <Dialog as="div" className="relative z-50" onClose={close}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-gray-900 bg-opacity-25" />
+            </Transition.Child>
+            <div className="fixed inset-0 overflow-y-auto">
+              <XMarkIcon
+                className="fixed top-[10px] right-5 cursor-pointer z-50 w-5 h-5 text-gray-600"
+                onClick={close}
+              />
+
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full max-w-xl transform overflow-hidden ring-tremor bg-white p-6 text-left align-middle shadow-tremor transition-all rounded-xl">
+                    <div className="h-screen w-screen border-l border-gray-100  border-t slideLeft">
+                      <ReactFlow
+                        nodes={nodes}
+                        edges={edges}
+                        onNodesChange={onNodesChange}
+                        onEdgesChange={onEdgesChange}
+                        onConnect={onConnect}
+                        nodeTypes={nodeTypes}
+                        fitView
+                        className="bg-white"
+                      >
+                        <Controls />
+                      </ReactFlow>
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
+      </div>
+    </>
   );
 };
 

@@ -82,7 +82,13 @@ function CustomNode({ data }) {
                       Details
                     </Text>
                     <Text className="uppercase">{data.name}</Text>
-                  </Flex>
+                  </Flex>{' '}
+                  <Button
+                    className="mt-2 w-full bg-white border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300 md:hidden block"
+                    onClick={closeModal}
+                  >
+                    Go back
+                  </Button>
                   <TextInput
                     icon={ArrowRightIcon}
                     placeholder="Search..."
@@ -115,7 +121,7 @@ function CustomNode({ data }) {
                     <div className="sticky inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white to-transparent h-20" />
                   </div>
                   <Button
-                    className="mt-2 w-full bg-white border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300"
+                    className="mt-2 w-full bg-white border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300 md:block hidden"
                     onClick={closeModal}
                   >
                     Go back
