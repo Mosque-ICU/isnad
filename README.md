@@ -51,9 +51,8 @@ GITHUB_SECRET=
 
 
 
-```
-Run the command npm run refresh to migrate and seed the database
-```
+Migration data is in a seperate repo at https://github.com/MosqueICU/isnad-migrations.
+Follow readme in this repo
 
 Finally, run the following commands to start the development server:
 
