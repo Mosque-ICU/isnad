@@ -5,13 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "refresh": "node migrator.ts refresh"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
-    "@planetscale/database": "^1.11.0",
     "@tremor/react": "^3.6.6",
     "@types/js-cookie": "^3.0.3",
     "@types/node": "20.5.6",

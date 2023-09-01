@@ -8,6 +8,8 @@ import {
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
+import collectionsList from '../../_json/collectionsList.json';
+
 function LeftSideBar({ children, setCurrentSelection }: any) {
   const [showSidebar, setShowSidebar] = React.useState(true);
   const [showMobileSidebar, setShowMobileSidebar] = React.useState(false);
@@ -17,37 +19,39 @@ function LeftSideBar({ children, setCurrentSelection }: any) {
   return (
     <>
       <div className=" h-[calc(100vh-53px)] hidden md:flex">
-        {showSidebar ? (
-          <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row relative">
-            <Bars3Icon
-              className="absolute top-2 right-2 w-5 h-5 text-gray-600 cursor-pointer z-50"
-              onClick={() => setShowSidebar(false)}
-            />
-            <div
-              className="  w-[60px] border border-gray-100 
+        <div
+          className="w-[410px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row relative slideLeft"
+          style={{ display: showSidebar ? 'flex' : 'none' }}
+        >
+          <Bars3Icon
+            className="absolute top-2 right-2 w-5 h-5 text-gray-600 cursor-pointer z-50"
+            onClick={() => setShowSidebar(false)}
+          />
+          <div
+            className="  w-[50px] border border-gray-100 
             "
-            ></div>
+          ></div>
 
-            <div className="flex50lex-col w-full p-5 mt-2">
-              <p
-                className="mb-4 font-semibold text-lg
+          <div className="flex flex-col w-full p-3 mt-2">
+            <p
+              className="mb-4  text-lg  text-underline
           "
-              >
-                Hadith Collections
-              </p>
-              {hadithData.map((hadith) => (
-                <HadithCollection
-                  key={hadith.id}
-                  hadith={hadith}
-                  setCurrentSelection={setCurrentSelection}
-                  navigate={(slug, bookId) =>
-                    router.push(`/${hadith.slug}/${bookId}`)
-                  }
-                />
-              ))}
-            </div>
+            >
+              Hadith Collections
+            </p>
+            {collectionsList.map((hadith) => (
+              <HadithCollection
+                key={hadith.id}
+                hadith={hadith}
+                setCurrentSelection={setCurrentSelection}
+                navigate={(slug, bookId) =>
+                  router.push(`/${hadith.slug}/${bookId}`)
+                }
+              />
+            ))}
           </div>
-        ) : (
+        </div>
+        {!showSidebar && (
           <Bars3Icon
             className="fixed top-[50px] left-2 w-5 h-5 text-gray-600 z-50 cursor-pointer "
             onClick={() => setShowSidebar(true)}
@@ -64,13 +68,13 @@ function LeftSideBar({ children, setCurrentSelection }: any) {
               onClick={() => setShowSidebar(false)}
             />
 
-            <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row ">
+            <div className="w-[400px] card bg-white shadow-sm min-h-full border border-gray-100  mt-[1px] flex flex-row  ">
               <div
                 className="  w-[60px] border border-gray-100 
             "
               ></div>
 
-              <div className="flex50lex-col w-full p-5 mt-2">
+              <div className="flex flex-col max-w-[100%]  mt-2 overflow-y-scroll p-3">
                 <p
                   className="mb-4 font-semibold text-lg
           "
@@ -106,78 +110,53 @@ function LeftSideBar({ children, setCurrentSelection }: any) {
 
 const HadithCollection = ({ hadith, navigate }: any) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
+  const [filter, setFilter] = React.useState('');
+
+  const filteredBooks = () => {
+    if (filter === '') return hadith.books;
+    return hadith.books.filter((book: any) => {
+      return book.title.toLowerCase().includes(filter.toLowerCase());
+    });
+  };
+
   return (
     <div
-      className="cursor-pointer p-1 rounded-md"
+      className="cursor-pointer    mb-1 hover:border-gray-500 hover:border-b"
       onClick={() => setIsExpanded(!isExpanded)}
     >
-      <span className=" text-gray-700 hover:text-blue-500">{hadith.title}</span>
+      <span className=" text-gray-700 hover:text-blue-500">
+        {hadith.title}
+        {isExpanded && <span className="text-gray-500"> (⬇️)</span>}
+      </span>
       {isExpanded && (
-        <>
-          <div className="flex flex-col">
-            {hadith.books.map((book: any) => (
+        <div className="slideInDown">
+          <input
+            onClick={(e) => e.stopPropagation()}
+            className="w-full p-1 mt-2 mb-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 hover:border-blue-500"
+            placeholder="Search Books"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          />
+          <div className="flex flex-col max-h-[65vh] overflow-y-auto ">
+            {filteredBooks().map((book: any) => (
               <div
-                className="flex flex-row hover:bg-blue-100 p-[2px] px-2 rounded-md hover:shadow-sm text-underlined"
+                className="flex flex-row hover:bg-blue-100 p-[2px] px-2 rounded-md hover:shadow-md text-sm cursor-pointer"
                 key={book.id}
                 onClick={(e) => {
                   e.stopPropagation();
                   navigate(hadith.slug, book.id);
                 }}
               >
-                <p>{book.title}</p>
+                <span>{book.id})</span> <p className="ml-2"> {book.title}</p>
                 <p className="text-gray-500 ml-2">{book.numberOfHadith}</p>
               </div>
             ))}
           </div>
-          <hr className="my-1" />
-        </>
+          {/* <hr className="my-1 border-gray-500" /> */}
+        </div>
       )}
     </div>
   );
 };
-
-const hadithData = [
-  {
-    id: 1,
-    title: 'Sahih Bukhari',
-    slug: 'sahih-bukhari',
-    type: 'collection',
-    description:
-      "Sahih Bukhari is a collection of sayings and deeds of Prophet Muhammad (pbuh), also known as the Sunnah. The reports of the Prophet's (saw) sayings and deeds are called ahadeeth. Imam Bukhari lived a couple of centuries after the Prophet's (saw) death and worked extremely hard to collect his ahadeeth. Each report in his collection was checked for compatibility with the Qur'an, and the veracity of the chain of reporters had to be painstakingly established. Bukhari's collection is recognized by the overwhelming majority of the Muslim world to be one of the most authentic collections of the Sunnah of the Prophet(pbuh). Bukhari (full name Abu Abdullah Muhammad bin Ismail bin Ibrahim bin al-Mughira al-Ja'fai) was born in 194 A.H. and died in 256 A.H. His collection of hadeeth is considered second to none. He spent sixteen years compiling it, and ended up with 2,602 hadeeth (9,082 with repetition).",
-
-    books: [
-      {
-        id: 1,
-        type: 'book',
-        title: 'Revelation',
-        title_ar: 'كتاب بدء الوحى',
-        description: 'Revelation',
-        numberOfHadith: '1 - 7'
-      },
-      {
-        id: 2,
-        title: 'Belief',
-        title_ar: 'كتاب الإيمان',
-        description: 'Belief',
-        type: 'book',
-        numberOfHadith: '8 - 58'
-      },
-      {
-        id: 3,
-        title: 'Knowledge',
-        title_ar: 'كتاب العلم',
-        description: 'Knowledge',
-        type: 'book',
-        numberOfHadith: '59 - 134'
-      }
-    ]
-  },
-  {
-    id: 2,
-    title: 'Sahih Muslim',
-    slug: 'sahih-muslim',
-    books: []
-  }
-];
 
 export default LeftSideBar;

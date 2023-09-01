@@ -19,7 +19,7 @@ export const GET = async (req: Request, res: Response) => {
     const [hadith] = await (
       await conn
     ).query(
-      `SELECT * FROM hadith WHERE collectionId = "${collectionId}" AND bookId = "${bookId}"`
+      `SELECT id, collectionId, bookId, hadithNumber, label, arabic, englishTrans, primaryNarrator FROM hadith WHERE collectionId = "${collectionId}" AND bookId = "${bookId}"`
     );
 
     return NextResponse.json(hadith);

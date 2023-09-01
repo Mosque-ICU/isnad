@@ -7,11 +7,5 @@ export default async function IndexPage({
 }: {
   searchParams: { q: string };
 }) {
-  // const users = await queryBuilder
-  //   .selectFrom('users')
-  //   .select(['id', 'name', 'username', 'email'])
-  //   .where('name', 'like', `%${search}%`)
-  //   .execute();
-
   return <HadithView />;
 }
