@@ -1,8 +1,13 @@
+export const runtime = 'edge'; // 'nodejs' is the default
+
 import { NextResponse } from 'next/server';
+import { connect } from '@planetscale/database';
 
-const mysql = require('mysql2/promise');
-const conn = mysql.createConnection(process.env.DATABASE_URL);
-
+// const mysql = require('mysql2/promise');
+// const conn = mysql.createConnection(process.env.DATABASE_URL);
+const conn = connect({
+  url: process.env.DATABASE_URL
+});
 export const GET = async (req: Request, res: Response) => {
   try {
     // get site query param
@@ -16,13 +21,12 @@ export const GET = async (req: Request, res: Response) => {
 
     //Get Hadith
 
-    const [hadith] = await (
-      await conn
-    ).query(
-      `SELECT id, collectionId, bookId, hadithNumber, label, arabic, englishTrans, primaryNarrator FROM hadith WHERE collectionId = "${collectionId}" AND bookId = "${bookId}"`
+    const hadith = await conn.execute(
+      `SELECT id, collectionId, bookId, hadithNumber, label, arabic, englishTrans, primaryNarrator FROM hadith WHERE collectionId = ? AND bookId = ?`,
+      [collectionId, bookId]
     );
 
-    return NextResponse.json(hadith);
+    return NextResponse.json(hadith?.rows || []);
   } catch (err) {
     console.log(err);
     return NextResponse.json({ errors: 'Server Error' }, { status: 500 });
