@@ -155,7 +155,7 @@ const IsnadViewer = ({ close }) => {
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
-          onConnect={onConnect}
+          onConnect={() => {}}
           nodeTypes={nodeTypes}
           fitView
           className="bg-white"

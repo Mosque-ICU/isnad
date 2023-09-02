@@ -81,7 +81,7 @@ function LeftSideBar({ children, setCurrentSelection }: any) {
                 >
                   Hadith Collections
                 </p>
-                {hadithData.map((hadith) => (
+                {collectionsList.map((hadith) => (
                   <HadithCollection
                     key={hadith.id}
                     hadith={hadith}
