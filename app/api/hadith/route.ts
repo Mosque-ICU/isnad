@@ -1,5 +1,3 @@
-export const runtime = 'edge'; // 'nodejs' is the default
-
 import { NextResponse } from 'next/server';
 import { connect } from '@planetscale/database';
 
