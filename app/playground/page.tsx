@@ -1,5 +1,4 @@
 'use client';
-export const runtime = 'edge';
 
 import { Card, Metric, Text, Title, BarList, Flex, Grid } from '@tremor/react';
 import Chart from './chart';
