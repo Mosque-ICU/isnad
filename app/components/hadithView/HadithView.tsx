@@ -13,7 +13,7 @@ function HadithView() {
   const path = usePathname();
 
   const [currentSelection, setCurrentSelection] = React.useState<any>(null);
-  const [showIsnadView, setShowIsnadView] = React.useState(false);
+  const [isnadData, setIsnadData] = React.useState(null) as any;
   const [currentBook, setCurrentBook] = React.useState<any>(null);
   const [currentData, setCurrentData] = React.useState<any>([]) as any;
   const [loading, setLoading] = React.useState(true);
@@ -71,14 +71,26 @@ function HadithView() {
             {currentData.map((hadith) => (
               <HadithContent
                 hadith={hadith}
-                setShowIsnadView={setShowIsnadView}
+                setIsnadData={setIsnadData}
                 key={hadith.hadithNumber}
               />
             ))}
           </div>
-          {showIsnadView && (
+          {isnadData && (
             <Suspense fallback={<div>Loading...</div>}>
-              <IsnadViewer close={() => setShowIsnadView(false)} />
+              {isnadData?.hadithNumber == 1 ? (
+                <IsnadViewer close={() => setIsnadData(null)} />
+              ) : (
+                <div className="justify-center items-center flex w-full h-full">
+                  <p
+                    className="absolute top-[50px] right-4 cursor-pointer z-50"
+                    onClick={() => setIsnadData(null)}
+                  >
+                    Close
+                  </p>
+                  <h2 className="mt-20">Isnad not available for this hadith</h2>
+                </div>
+              )}
             </Suspense>
           )}
         </div>
@@ -90,7 +102,7 @@ function HadithView() {
   );
 }
 
-const HadithContent = ({ hadith, setShowIsnadView }: any) => {
+const HadithContent = ({ hadith, setIsnadData }: any) => {
   const [showCommentaries, setShowCommentaries] = React.useState(false);
   return (
     <Card
@@ -132,7 +144,9 @@ const HadithContent = ({ hadith, setShowIsnadView }: any) => {
         <div className="ml-12 flex flex-row mt-5">
           <p
             className="text-gray-700   text-sm hover:text-blue-500 cursor-pointer hover:shadow-sm rounded-md p-1"
-            onClick={() => setShowIsnadView((prev) => !prev)}
+            onClick={() => {
+              setIsnadData(hadith);
+            }}
           >
             Explore Isnad{' '}
           </p>
