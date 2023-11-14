@@ -111,7 +111,7 @@ const HadithContent = ({ hadith, setIsnadData }: any) => {
       // onClick={() => setShowIsnadView(!showIsnadView)}
     >
       <p>
-        {hadith.primaryNarrator} ( {hadith?.primaryNarratorEn} )
+        {hadith.narratorPrefix} ( {hadith?.englisNarratorPrefix} )
         {/* narrates: */}
       </p>
       <div className="flex md:flex-row flex-col justify-between mt-3">

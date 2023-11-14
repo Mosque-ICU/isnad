@@ -20,7 +20,8 @@ export const GET = async (req: Request, res: Response) => {
     //Get Hadith
 
     const hadith = await conn.execute(
-      `SELECT id, collectionId, bookId, hadithNumber, label, arabic, englishTrans, primaryNarrator FROM hadith WHERE collectionId = ? AND bookId = ?`,
+      `SELECT id, collectionId, bookId, hadithNumber, label , arabic, englishTrans, narratorPrefix, narratorPostfix, englisNarratorPrefix, englishNarratorPostfix, chapterId, orderInBook, comments
+      FROM hadith WHERE collectionId = ? AND bookId = ?`,
       [collectionId, bookId]
     );
 
