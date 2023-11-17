@@ -1,0 +1,572 @@
+[
+  {
+    "id": 1,
+    "title": "Parents",
+    "title_ar": "كتاب الْوَالِدَيْنِ",
+    "description": "Parents",
+    "type": "book",
+    "numberOfHadith": 46,
+    "hadithStart": 1,
+    "hadithEnd": 46
+  },
+  {
+    "id": 2,
+    "title": "Ties of Kinship",
+    "title_ar": "كتاب صِلَةِ الرَّحِمِ",
+    "description": "Ties of Kinship",
+    "type": "book",
+    "numberOfHadith": 27,
+    "hadithStart": 47,
+    "hadithEnd": 73
+  },
+  {
+    "id": 3,
+    "title": "Mawlas (Clients of Manumission)",
+    "title_ar": "كتاب مَوَالِي",
+    "description": "Mawlas (Clients of Manumission)",
+    "type": "book",
+    "numberOfHadith": 2,
+    "hadithStart": 74,
+    "hadithEnd": 75
+  },
+  {
+    "id": 4,
+    "title": "Looking after girls",
+    "title_ar": "كتاب عول البنات",
+    "description": "Looking after girls",
+    "type": "book",
+    "numberOfHadith": 8,
+    "hadithStart": 76,
+    "hadithEnd": 83
+  },
+  {
+    "id": 5,
+    "title": "Looking after children",
+    "title_ar": "كتاب رعاية الأولاد",
+    "description": "Looking after children",
+    "type": "book",
+    "numberOfHadith": 17,
+    "hadithStart": 84,
+    "hadithEnd": 100
+  },
+  {
+    "id": 6,
+    "title": "Neighbours",
+    "title_ar": "كتاب الْجَارِ",
+    "description": "Neighbours",
+    "type": "book",
+    "numberOfHadith": 28,
+    "hadithStart": 101,
+    "hadithEnd": 128
+  },
+  {
+    "id": 7,
+    "title": "Generosity and Orphans",
+    "title_ar": "كتاب الْكَرَمِ وَ يَتِيمٌ",
+    "description": "Generosity and Orphans",
+    "type": "book",
+    "numberOfHadith": 14,
+    "hadithStart": 129,
+    "hadithEnd": 142
+  },
+  {
+    "id": 8,
+    "title": "Children's Death",
+    "title_ar": "كتاب موت الأولاد",
+    "description": "Children's Death",
+    "type": "book",
+    "numberOfHadith": 13,
+    "hadithStart": 143,
+    "hadithEnd": 155
+  },
+  {
+    "id": 9,
+    "title": "Being a master",
+    "title_ar": "كتاب الملكة",
+    "description": "Being a master",
+    "type": "book",
+    "numberOfHadith": 56,
+    "hadithStart": 156,
+    "hadithEnd": 211
+  },
+  {
+    "id": 10,
+    "title": "Supervision",
+    "title_ar": "كتاب الرعاية",
+    "description": "Supervision",
+    "type": "book",
+    "numberOfHadith": 9,
+    "hadithStart": 212,
+    "hadithEnd": 220
+  },
+  {
+    "id": 11,
+    "title": "Good Conduct",
+    "title_ar": "كتاب الْمَعْرُوفِ",
+    "description": "Good Conduct",
+    "type": "book",
+    "numberOfHadith": 17,
+    "hadithStart": 221,
+    "hadithEnd": 237
+  },
+  {
+    "id": 12,
+    "title": "Cheerfulness Towards People",
+    "title_ar": "كتاب الِانْبِسَاطِ إِلَى النَّاسِ",
+    "description": "Cheerfulness Towards People",
+    "type": "book",
+    "numberOfHadith": 18,
+    "hadithStart": 238,
+    "hadithEnd": 255
+  },
+  {
+    "id": 13,
+    "title": "Consultation",
+    "title_ar": "كتاب الْمَشُورَةِ",
+    "description": "Consultation",
+    "type": "book",
+    "numberOfHadith": 4,
+    "hadithStart": 256,
+    "hadithEnd": 259
+  },
+  {
+    "id": 14,
+    "title": "Excellence in Character",
+    "title_ar": "كتاب حسن الخلق",
+    "description": "Excellence in Character",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 15,
+    "title": "Cursing",
+    "title_ar": "كتاب اللعن",
+    "description": "Cursing",
+    "type": "book",
+    "numberOfHadith": 24,
+    "hadithStart": 309,
+    "hadithEnd": 332
+  },
+  {
+    "id": 16,
+    "title": "Praise",
+    "title_ar": "كتاب المدح",
+    "description": "Praise",
+    "type": "book",
+    "numberOfHadith": 11,
+    "hadithStart": 333,
+    "hadithEnd": 343
+  },
+  {
+    "id": 17,
+    "title": "Visitation",
+    "title_ar": "كتاب الزِّيَارَةِ",
+    "description": "Visitation",
+    "type": "book",
+    "numberOfHadith": 10,
+    "hadithStart": 344,
+    "hadithEnd": 352
+  },
+  {
+    "id": 18,
+    "title": "The Elderly",
+    "title_ar": "كتاب الأكَابِرِ",
+    "description": "The Elderly",
+    "type": "book",
+    "numberOfHadith": 9,
+    "hadithStart": 353,
+    "hadithEnd": 361
+  },
+  {
+    "id": 19,
+    "title": "Children",
+    "title_ar": "كتاب الصَّغِيرِ",
+    "description": "Children",
+    "type": "book",
+    "numberOfHadith": 10,
+    "hadithStart": 362,
+    "hadithEnd": 371
+  },
+  {
+    "id": 20,
+    "title": "Mercy",
+    "title_ar": "كتاب رَحْمَةِ",
+    "description": "Mercy",
+    "type": "book",
+    "numberOfHadith": 13,
+    "hadithStart": 372,
+    "hadithEnd": 384
+  },
+  {
+    "id": 21,
+    "title": "Social Behaviour",
+    "title_ar": "كتاب ذات البين",
+    "description": "Social Behaviour",
+    "type": "book",
+    "numberOfHadith": 12,
+    "hadithStart": 385,
+    "hadithEnd": 396
+  },
+  {
+    "id": 22,
+    "title": "Abandonment",
+    "title_ar": "كتاب الهجر",
+    "description": "Abandonment",
+    "type": "book",
+    "numberOfHadith": 18,
+    "hadithStart": 397,
+    "hadithEnd": 414
+  },
+  {
+    "id": 23,
+    "title": "Advising",
+    "title_ar": "كتاب الإشارة",
+    "description": "Advising",
+    "type": "book",
+    "numberOfHadith": 4,
+    "hadithStart": 415,
+    "hadithEnd": 418
+  },
+  {
+    "id": 24,
+    "title": "Disparaging",
+    "title_ar": "كتاب السِّبَابِ",
+    "description": "Disparaging",
+    "type": "book",
+    "numberOfHadith": 23,
+    "hadithStart": 419,
+    "hadithEnd": 441
+  },
+  {
+    "id": 25,
+    "title": "Extravagance in Building",
+    "title_ar": "كتاب السَّرَفِ فِي  الْبِنَاءِ",
+    "description": "Extravagance in Building",
+    "type": "book",
+    "numberOfHadith": 20,
+    "hadithStart": 442,
+    "hadithEnd": 461
+  },
+  {
+    "id": 26,
+    "title": "Compassion",
+    "title_ar": "كتاب الرِّفْقِ",
+    "description": "Compassion",
+    "type": "book",
+    "numberOfHadith": 13,
+    "hadithStart": 462,
+    "hadithEnd": 474
+  },
+  {
+    "id": 27,
+    "title": "Attending to this world",
+    "title_ar": "كتاب الاعتناء بالدنيا",
+    "description": "Attending to this world",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 28,
+    "title": "Injustice",
+    "title_ar": "كتاب الظُّلْم",
+    "description": "Injustice",
+    "type": "book",
+    "numberOfHadith": 8,
+    "hadithStart": 483,
+    "hadithEnd": 490
+  },
+  {
+    "id": 29,
+    "title": "Visiting the Ill",
+    "title_ar": "كتاب عيادة المرضى",
+    "description": "Visiting the Ill",
+    "type": "book",
+    "numberOfHadith": 47,
+    "hadithStart": 491,
+    "hadithEnd": 537
+  },
+  {
+    "id": 30,
+    "title": "General Behavior",
+    "title_ar": "كتاب التصرف العام",
+    "description": "General Behavior",
+    "type": "book",
+    "numberOfHadith": 66,
+    "hadithStart": 538,
+    "hadithEnd": 603
+  },
+  {
+    "id": 31,
+    "title": "Supplication",
+    "title_ar": "كتاب الدعاء",
+    "description": "Supplication",
+    "type": "book",
+    "numberOfHadith": 135,
+    "hadithStart": 604,
+    "hadithEnd": 738
+  },
+  {
+    "id": 32,
+    "title": "Guests and Spending",
+    "title_ar": "كتاب الضيف والنفقة",
+    "description": "Guests and Spending",
+    "type": "book",
+    "numberOfHadith": 15,
+    "hadithStart": 739,
+    "hadithEnd": 753
+  },
+  {
+    "id": 33,
+    "title": "Sayings",
+    "title_ar": "كتاب الأقوال",
+    "description": "Sayings",
+    "type": "book",
+    "numberOfHadith": 57,
+    "hadithStart": 754,
+    "hadithEnd": 810
+  },
+  {
+    "id": 34,
+    "title": "Names",
+    "title_ar": "كتاب الأسْمَاءِ",
+    "description": "Names",
+    "type": "book",
+    "numberOfHadith": 31,
+    "hadithStart": 811,
+    "hadithEnd": 841
+  },
+  {
+    "id": 35,
+    "title": "Kunyas",
+    "title_ar": "كتاب  الكُنْيَةِ",
+    "description": "Kunyas",
+    "type": "book",
+    "numberOfHadith": 14,
+    "hadithStart": 842,
+    "hadithEnd": 855
+  },
+  {
+    "id": 36,
+    "title": "Poetry",
+    "title_ar": "كتاب الشِّعْرِ",
+    "description": "Poetry",
+    "type": "book",
+    "numberOfHadith": 19,
+    "hadithStart": 856,
+    "hadithEnd": 874
+  },
+  {
+    "id": 37,
+    "title": "Words",
+    "title_ar": "كتاب الْكَلامِ",
+    "description": "Words",
+    "type": "book",
+    "numberOfHadith": 13,
+    "hadithStart": 875,
+    "hadithEnd": 887
+  },
+  {
+    "id": 38,
+    "title": "Consequences",
+    "title_ar": "كتاب عاقبة الأمور",
+    "description": "Consequences",
+    "type": "book",
+    "numberOfHadith": 19,
+    "hadithStart": 888,
+    "hadithEnd": 906
+  },
+  {
+    "id": 39,
+    "title": "Omens",
+    "title_ar": "كتاب الطيرة",
+    "description": "Omens",
+    "type": "book",
+    "numberOfHadith": 12,
+    "hadithStart": 907,
+    "hadithEnd": 918
+  },
+  {
+    "id": 40,
+    "title": "Sneezing and Yawning",
+    "title_ar": "كتاب الْعُطَاسَ والتثاؤب",
+    "description": "Sneezing and Yawning",
+    "type": "book",
+    "numberOfHadith": 33,
+    "hadithStart": 919,
+    "hadithEnd": 951
+  },
+  {
+    "id": 41,
+    "title": "Gestures",
+    "title_ar": "كتاب الحركات",
+    "description": "Gestures",
+    "type": "book",
+    "numberOfHadith": 13,
+    "hadithStart": 952,
+    "hadithEnd": 964
+  },
+  {
+    "id": 42,
+    "title": "Greetings",
+    "title_ar": "كتاب السَّلامِ",
+    "description": "Greetings",
+    "type": "book",
+    "numberOfHadith": 87,
+    "hadithStart": 965,
+    "hadithEnd": 1050
+  },
+  {
+    "id": 43,
+    "title": "Asking Permission",
+    "title_ar": "كتاب الاسْتِئْذَانُ",
+    "description": "Asking Permission",
+    "type": "book",
+    "numberOfHadith": 50,
+    "hadithStart": 1051,
+    "hadithEnd": 1100
+  },
+  {
+    "id": 44,
+    "title": "The People of the Book",
+    "title_ar": "كتاب أَهْلِ الْكِتَابِ",
+    "description": "The People of the Book",
+    "type": "book",
+    "numberOfHadith": 16,
+    "hadithStart": 1101,
+    "hadithEnd": 1116
+  },
+  {
+    "id": 45,
+    "title": "Letters",
+    "title_ar": "كتاب الرَّسَائِلِ‏",
+    "description": "Letters",
+    "type": "book",
+    "numberOfHadith": 19,
+    "hadithStart": 1117,
+    "hadithEnd": 1135
+  },
+  {
+    "id": 46,
+    "title": "Gatherings",
+    "title_ar": "كتاب الْمَجَالِسِ",
+    "description": "Gatherings",
+    "type": "book",
+    "numberOfHadith": 17,
+    "hadithStart": 1136,
+    "hadithEnd": 1152
+  },
+  {
+    "id": 47,
+    "title": "Behaviour with people",
+    "title_ar": "كتاب تعامل الناس",
+    "description": "Behaviour with people",
+    "type": "book",
+    "numberOfHadith": 22,
+    "hadithStart": 1153,
+    "hadithEnd": 1174
+  },
+  {
+    "id": 48,
+    "title": "Sitting and lying down",
+    "title_ar": "باب الجلوس والاستلقاء",
+    "description": "Sitting and lying down",
+    "type": "book",
+    "numberOfHadith": 24,
+    "hadithStart": 1175,
+    "hadithEnd": 1198
+  },
+  {
+    "id": 49,
+    "title": "Mornings and evenings",
+    "title_ar": "كتاب الصباح والمساء",
+    "description": "Mornings and evenings",
+    "type": "book",
+    "numberOfHadith": 6,
+    "hadithStart": 1199,
+    "hadithEnd": 1204
+  },
+  {
+    "id": 50,
+    "title": "Sleep and night lodging",
+    "title_ar": "كتاب النوم والمبيت",
+    "description": "Sleep and night lodging",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 51,
+    "title": "Animals",
+    "title_ar": "كتاب الْبَهَائِمِ",
+    "description": "Animals",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 52,
+    "title": "Midday Naps",
+    "title_ar": "كتاب الْقَائِلَةِ",
+    "description": "Midday Naps",
+    "type": "book",
+    "numberOfHadith": 6,
+    "hadithStart": 1238,
+    "hadithEnd": 1243
+  },
+  {
+    "id": 53,
+    "title": "Circumcision",
+    "title_ar": "كتاب الْخِتَانِ",
+    "description": "Circumcision",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 54,
+    "title": "Betting and similar pastimes",
+    "title_ar": "كتاب القمار ونحوه",
+    "description": "Betting and similar pastimes",
+    "type": "book",
+    "numberOfHadith": 23,
+    "hadithStart": 1259,
+    "hadithEnd": 1281
+  },
+  {
+    "id": 55,
+    "title": "Recognition",
+    "title_ar": "كتاب المعرفة\r\n",
+    "description": "Recognition",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 56,
+    "title": "Meddling and Harshness",
+    "title_ar": "كتاب الفضول والجفاء",
+    "description": "Meddling and Harshness",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 57,
+    "title": "Anger",
+    "title_ar": "كتاب الْغَضَبِ",
+    "description": "Anger",
+    "type": "book",
+    "numberOfHadith": 7,
+    "hadithStart": 1317,
+    "hadithEnd": 1322
+  }
+]

@@ -6,6 +6,17 @@ body {
   font-family: 'Akzidenz Roman', Helvetica, Arial, sans-serif;
 }
 
+mark {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .slideLeft {
   visibility: visible !important;
   animation: slideLeft 0.15s ease-in-out;

@@ -1,29 +1,29 @@
 'use client';
 
+import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
-import { usePathname, useRouter } from 'next/navigation';
-import { useTransition } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import React, { useTransition, useState } from 'react';
 
 export default function Search({ disabled }: { disabled?: boolean }) {
-  const { replace } = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [isPending, setIsPending] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   function handleSearch(term: string) {
-    const params = new URLSearchParams(window.location.search);
-    if (term) {
-      params.set('q', term);
-    } else {
-      params.delete('q');
-    }
-
-    startTransition(() => {
-      replace(`${pathname}?${params.toString()}`);
-    });
+    setIsPending(true);
+    router.push(`/search?q=${term}`);
   }
 
+  React.useEffect(() => {
+    if (searchTerm && isPending && searchParams?.get('q') === searchTerm) {
+      setIsPending(false);
+    }
+  }, [searchParams]);
+
   return (
-    <div className="relative max-w-md">
+    <div className="relative max-w-md  w-[30vw] min-w-[200px]">
       <label htmlFor="search" className="sr-only">
         Search
       </label>
@@ -42,11 +42,23 @@ export default function Search({ disabled }: { disabled?: boolean }) {
           name="search"
           id="search"
           disabled={disabled}
-          className="h-10 block w-full rounded-md border border-gray-200 pl-9 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="Search by name..."
-          spellCheck={false}
-          onChange={(e) => handleSearch(e.target.value)}
+          value={searchTerm}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter' && !isPending) {
+              handleSearch(searchTerm);
+            }
+          }}
+          className="h-10 block w-full rounded-md border border-gray-200 pl-9 pr-3 py-2 text-base font-medium text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500sm:text-sm"
+          placeholder="Search hadith ..."
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
+        {searchTerm && !isPending && (
+          <ArrowRightCircleIcon
+            title="Search"
+            className="ml-1 h-5 w-5 text-blue-500 cursor-pointer hover:text-blue-700 absolute right-[3px] top-[9px] bottom-0 flex items-center justify-center"
+            onClick={() => handleSearch(searchTerm)}
+          />
+        )}
       </div>
 
       {isPending && (

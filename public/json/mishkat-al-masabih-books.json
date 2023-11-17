@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "title": "Author's Introduction",
+    "title_ar": "مقدمة المؤلف",
+    "description": "Author's Introduction",
+    "type": "book",
+    "numberOfHadith": 1,
+    "hadithStart": 1,
+    "hadithEnd": 1
+  },
+  {
+    "id": 2,
+    "title": "Faith",
+    "title_ar": "كتاب الإيمان",
+    "description": "Faith",
+    "type": "book",
+    "numberOfHadith": 188,
+    "hadithStart": 2,
+    "hadithEnd": 197
+  },
+  {
+    "id": 3,
+    "title": "Knowledge",
+    "title_ar": "كتاب العلم",
+    "description": "Knowledge",
+    "type": "book",
+    "numberOfHadith": 75,
+    "hadithStart": 198,
+    "hadithEnd": 280
+  },
+  {
+    "id": 4,
+    "title": "Purification",
+    "title_ar": "كتاب الطهارة",
+    "description": "Purification",
+    "type": "book",
+    "numberOfHadith": 258,
+    "hadithStart": 281,
+    "hadithEnd": 562
+  },
+  {
+    "id": 5,
+    "title": "Prayer",
+    "title_ar": "كتاب الصلاة",
+    "description": "Prayer",
+    "type": "book",
+    "numberOfHadith": 921,
+    "hadithStart": 564,
+    "hadithEnd": 1522
+  },
+  {
+    "id": 6,
+    "title": "Funerals",
+    "title_ar": "كتاب الجنائز",
+    "description": "Funerals",
+    "type": "book",
+    "numberOfHadith": 243,
+    "hadithStart": 1523,
+    "hadithEnd": 1771
+  },
+  {
+    "id": 7,
+    "title": "Zakat",
+    "title_ar": "كتاب الزكاة",
+    "description": "Zakat",
+    "type": "book",
+    "numberOfHadith": 180,
+    "hadithStart": 1772,
+    "hadithEnd": 1955
+  },
+  {
+    "id": 8,
+    "title": "Fasting",
+    "title_ar": "كتاب الصوم",
+    "description": "Fasting",
+    "type": "book",
+    "numberOfHadith": 148,
+    "hadithStart": 1956,
+    "hadithEnd": 2108
+  },
+  {
+    "id": 9,
+    "title": "The Excellent Qualities of the Qur'an",
+    "title_ar": "كتاب فضائل القرآن",
+    "description": "The Excellent Qualities of the Qur'an",
+    "type": "book",
+    "numberOfHadith": 112,
+    "hadithStart": 2109,
+    "hadithEnd": 2222
+  },
+  {
+    "id": 10,
+    "title": "Supplications",
+    "title_ar": "كتاب الدعوات",
+    "description": "Supplications",
+    "type": "book",
+    "numberOfHadith": 272,
+    "hadithStart": 2223,
+    "hadithEnd": 2504
+  },
+  {
+    "id": 11,
+    "title": "The Rites of Pilgrimage",
+    "title_ar": "كتاب المناسك",
+    "description": "The Rites of Pilgrimage",
+    "type": "book",
+    "numberOfHadith": 246,
+    "hadithStart": 2505,
+    "hadithEnd": 2758
+  },
+  {
+    "id": 12,
+    "title": "Business Transactions",
+    "title_ar": "كتاب البيوع",
+    "description": "Business Transactions",
+    "type": "book",
+    "numberOfHadith": 274,
+    "hadithStart": 2759,
+    "hadithEnd": 3040
+  },
+  {
+    "id": 13,
+    "title": "Inheritance and Wills",
+    "title_ar": "كتاب الفرائض والوصايا",
+    "description": "Inheritance and Wills",
+    "type": "book",
+    "numberOfHadith": 37,
+    "hadithStart": 3041,
+    "hadithEnd": 3078
+  },
+  {
+    "id": 14,
+    "title": "Marriage",
+    "title_ar": "كتاب النكاح",
+    "description": "Marriage",
+    "type": "book",
+    "numberOfHadith": 293,
+    "hadithStart": 3080,
+    "hadithEnd": 3381
+  },
+  {
+    "id": 15,
+    "title": "Emancipation",
+    "title_ar": "كتاب العتق",
+    "description": "Emancipation",
+    "type": "book",
+    "numberOfHadith": 24,
+    "hadithStart": 3382,
+    "hadithEnd": 3405
+  },
+  {
+    "id": 16,
+    "title": "Oaths and Vows",
+    "title_ar": "كتاب الإيمان والنذور",
+    "description": "Oaths and Vows",
+    "type": "book",
+    "numberOfHadith": 39,
+    "hadithStart": 3406,
+    "hadithEnd": 3445
+  },
+  {
+    "id": 17,
+    "title": "Retaliation",
+    "title_ar": "كتاب القصاص",
+    "description": "Retaliation",
+    "type": "book",
+    "numberOfHadith": 100,
+    "hadithStart": 3446,
+    "hadithEnd": 3554
+  },
+  {
+    "id": 18,
+    "title": "Prescribed Punishments",
+    "title_ar": "كتاب الحدود",
+    "description": "Prescribed Punishments",
+    "type": "book",
+    "numberOfHadith": 94,
+    "hadithStart": 3555,
+    "hadithEnd": 3660
+  },
+  {
+    "id": 19,
+    "title": "The Offices of Commander and Qadi",
+    "title_ar": "كتاب الإمارة والقضاء",
+    "description": "The Offices of Commander and Qadi",
+    "type": "book",
+    "numberOfHadith": 121,
+    "hadithStart": 3661,
+    "hadithEnd": 3786
+  },
+  {
+    "id": 20,
+    "title": "Jihad",
+    "title_ar": "كتاب الجهاد",
+    "description": "Jihad",
+    "type": "book",
+    "numberOfHadith": 273,
+    "hadithStart": 3787,
+    "hadithEnd": 4063
+  },
+  {
+    "id": 21,
+    "title": "Game and Animals Which May Be Slaughtered",
+    "title_ar": "كتاب الصيد والذبائح",
+    "description": "Game and Animals Which May Be Slaughtered",
+    "type": "book",
+    "numberOfHadith": 93,
+    "hadithStart": 4064,
+    "hadithEnd": 4158
+  },
+  {
+    "id": 22,
+    "title": "Foods",
+    "title_ar": "كتاب الأطعمة",
+    "description": "Foods",
+    "type": "book",
+    "numberOfHadith": 135,
+    "hadithStart": 4159,
+    "hadithEnd": 4303
+  },
+  {
+    "id": 23,
+    "title": "Clothing",
+    "title_ar": "كتاب اللباس",
+    "description": "Clothing",
+    "type": "book",
+    "numberOfHadith": 198,
+    "hadithStart": 4304,
+    "hadithEnd": 4513
+  },
+  {
+    "id": 24,
+    "title": "Medicine and Spells",
+    "title_ar": "كتاب الطب والرقى",
+    "description": "Medicine and Spells",
+    "type": "book",
+    "numberOfHadith": 88,
+    "hadithStart": 4514,
+    "hadithEnd": 4605
+  },
+  {
+    "id": 25,
+    "title": "Visions",
+    "title_ar": "كتاب الرؤيا",
+    "description": "Visions",
+    "type": "book",
+    "numberOfHadith": 20,
+    "hadithStart": 4606,
+    "hadithEnd": 4627
+  }
+]

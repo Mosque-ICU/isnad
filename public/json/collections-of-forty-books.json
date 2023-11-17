@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Forty Hadith of an-Nawawi",
+    "title_ar": "الأربعون النووية",
+    "description": "Forty Hadith of an-Nawawi",
+    "type": "book",
+    "numberOfHadith": 42,
+    "hadithStart": 1,
+    "hadithEnd": 42
+  },
+  {
+    "id": 2,
+    "title": "Forty Hadith Qudsi",
+    "title_ar": "الحديث القدسي",
+    "description": "Forty Hadith Qudsi",
+    "type": "book",
+    "numberOfHadith": 40,
+    "hadithStart": 1,
+    "hadithEnd": 40
+  },
+  {
+    "id": 3,
+    "title": "Forty Hadith of Shah Waliullah Dehlawi",
+    "title_ar": "أربعون شاه ولي الله الدهلوي",
+    "description": "Forty Hadith of Shah Waliullah Dehlawi",
+    "type": "book",
+    "numberOfHadith": 40,
+    "hadithStart": 1,
+    "hadithEnd": 40
+  }
+]

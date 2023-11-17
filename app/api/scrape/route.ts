@@ -8,7 +8,7 @@ export const GET = async (req: Request, res: Response) => {
   const site = searchParams.get('site');
   const currentBook = searchParams.get('currentBook');
   const collectionId = searchParams.get('collectionId');
-  let lastHadithNumber = searchParams.get('lastHadithNumber') || 0;
+  let lastHadithNumber: any = searchParams.get('lastHadithNumber') || '0';
 
   //@ts-ignore
   lastHadithNumber = parseInt(lastHadithNumber);
@@ -27,6 +27,7 @@ export const GET = async (req: Request, res: Response) => {
   //get label
 
   $('.hadith_reference_sticky').each(function (i: number, elem: any) {
+    //@ts-ignore
     data[i] = { ...data[i], label: $(this).text() };
     data[i] = { ...data[i], bookId: currentBook };
     data[i] = { ...data[i], collectionId: collectionId };
@@ -34,6 +35,7 @@ export const GET = async (req: Request, res: Response) => {
 
   // get arabic hadith
   $('.arabic_hadith_full').each(function (i: number, elem: any) {
+    //@ts-ignore
     data[i] = { ...data[i], arabic: $(this).html().replaceAll('"', "'") };
 
     data[i] = {
@@ -46,11 +48,13 @@ export const GET = async (req: Request, res: Response) => {
 
   // get english translation
   $('.text_details').each(function (i: number, elem: any) {
+    //@ts-ignore
     data[i] = { ...data[i], englishTrans: $(this).html().replaceAll('"', "'") };
   });
 
   //get narrator
   $('.hadith_narrated').each(function (i: number, elem: any) {
+    //@ts-ignore
     data[i] = { ...data[i], primaryNarrator: $(this).text() };
   });
 

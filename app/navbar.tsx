@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 
 import { Fragment } from 'react';
 import { usePathname } from 'next/navigation';
@@ -6,6 +7,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { signIn, signOut } from 'next-auth/react';
 import Image from 'next/image';
+import Search from './search';
 
 const navigation = [
   { name: 'Dashboard', href: '/' },
@@ -67,6 +69,27 @@ export default function Navbar({ user }: { user: any }) {
                   ))}
                 </div>
               </div>
+              <div className=" flex flex-row items-center">
+                {/* <input
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="border border-gray-300 rounded-md p-1 focus:outline-none focus:ring-1 focus:ring-blue-500 hover:border-blue-500 w-[300px]"
+                  placeholder="Search"
+                />
+                {searchTerm && (
+                  <div className="ml-2">
+                    <button
+                      onClick={() => setSearchTerm('')}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      <Search
+                    </button>
+                  </div>
+                )} */}
+
+                <Search />
+              </div>
+
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <Menu as="div" className="relative ml-3">
                   <div>

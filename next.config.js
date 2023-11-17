@@ -10,25 +10,9 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true
   },
-  headers: [
-    // Allow for specific domains to have access or * for all
-    {
-      key: 'Access-Control-Allow-Origin',
-      value: '*'
-      // DOES NOT WORK
-      // value: process.env.ALLOWED_ORIGIN,
-    },
-    // Allows for specific methods accepted
-    {
-      key: 'Access-Control-Allow-Methods',
-      value: 'GET, POST, PUT, DELETE, OPTIONS'
-    },
-
-    {
-      key: 'Access-Control-Allow-Headers',
-      value: '*'
-    }
-  ]
+  eslint: {
+    ignoreDuringBuilds: ['/src/**/*'] // This is important for linting to work on the server
+  }
 };
 
 module.exports = nextConfig;

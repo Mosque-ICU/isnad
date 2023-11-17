@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Fortress of the Muslim (Hisn al-Muslim)",
+    "title_ar": "حصن المسلم",
+    "description": "Fortress of the Muslim (Hisn al-Muslim)",
+    "type": "book",
+    "numberOfHadith": 268,
+    "hadithStart": 1,
+    "hadithEnd": 267
+  }
+]

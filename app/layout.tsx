@@ -25,8 +25,11 @@ export default async function RootLayout({
         </Suspense>
 
         <LeftSideBar>{children}</LeftSideBar>
-        <span className="text-gray-700 text-[12px] absolute bottom-[-10px] left-0 ml-3 mb-3">
-          Data provided from <a href="https://sunnah.com/">sunnah.com</a>
+        <span className="text-gray-700 text-[12px] absolute bottom-[-13px] left-0 ml-3 mb-3">
+          Content provided by{' '}
+          <a target="_blank" href="https://sunnah.com/">
+            sunnah.com
+          </a>
         </span>
         <Analytics />
         <Toast />

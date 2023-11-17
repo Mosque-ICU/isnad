@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "The Book of Purification",
+    "title_ar": "كتاب الطهارة",
+    "description": "The Book of Purification",
+    "type": "book",
+    "numberOfHadith": 179,
+    "hadithStart": 1,
+    "hadithEnd": 150
+  },
+  {
+    "id": 2,
+    "title": "The Book of Prayer",
+    "title_ar": "كتاب الصلاة",
+    "description": "The Book of Prayer",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 3,
+    "title": "Funerals",
+    "title_ar": "كتاب الجنائز",
+    "description": "Funerals",
+    "type": "book",
+    "numberOfHadith": 66,
+    "hadithStart": 532,
+    "hadithEnd": 597
+  },
+  {
+    "id": 4,
+    "title": "The Book of Zakah",
+    "title_ar": "كتاب الزكاة",
+    "description": "The Book of Zakah",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 5,
+    "title": "Fasting",
+    "title_ar": "كتاب الصيام",
+    "description": "Fasting",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 6,
+    "title": "Hajj",
+    "title_ar": "كتاب الحج",
+    "description": "Hajj",
+    "type": "book",
+    "numberOfHadith": 74,
+    "hadithStart": 708,
+    "hadithEnd": 782
+  },
+  {
+    "id": 7,
+    "title": "Business Transactions",
+    "title_ar": "كتاب البيوع",
+    "description": "Business Transactions",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 8,
+    "title": "Marriage",
+    "title_ar": "كتاب النكاح",
+    "description": "Marriage",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 9,
+    "title": "Crimes (Qisas or Retaliation)",
+    "title_ar": "كتاب الجنايات",
+    "description": "Crimes (Qisas or Retaliation)",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 10,
+    "title": "Hudud",
+    "title_ar": "كتاب الحدود",
+    "description": "Hudud",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 11,
+    "title": "Jihad",
+    "title_ar": "كتاب الجهاد",
+    "description": "Jihad",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 12,
+    "title": "Food",
+    "title_ar": "كتاب الأطعمة",
+    "description": "Food",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 13,
+    "title": "Oaths and Vows",
+    "title_ar": "كتاب الأيمان والنذور ",
+    "description": "Oaths and Vows",
+    "type": "book",
+    "numberOfHadith": 23,
+    "hadithStart": 1374,
+    "hadithEnd": 1396
+  },
+  {
+    "id": 14,
+    "title": "Judgments",
+    "title_ar": "كتاب القضاء ",
+    "description": "Judgments",
+    "type": "book",
+    "numberOfHadith": 36,
+    "hadithStart": 1397,
+    "hadithEnd": 1432
+  },
+  {
+    "id": 15,
+    "title": "Emancipation",
+    "title_ar": "كتاب العتق",
+    "description": "Emancipation",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  },
+  {
+    "id": 16,
+    "title": "The Comprehensive Book",
+    "title_ar": "كتاب الجامع",
+    "description": "The Comprehensive Book",
+    "type": "book",
+    "numberOfHadith": 0,
+    "hadithStart": 0,
+    "hadithEnd": 0
+  }
+]
