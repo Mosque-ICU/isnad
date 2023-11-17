@@ -46,7 +46,12 @@ const HadithBooks = ({ data, navigate, currentBook }: HadithBooksProps) => {
         setIsExpanded(!isExpanded);
       }}
     >
-      <span className=" text-gray-700 hover:text-blue-500">
+      <span
+        className={` text-gray-700 hover:text-blue-500  ${
+          //@ts-expect-error
+          currentBook[0] == data.id ? 'text-blue-500' : ''
+        }`}
+      >
         {data.title}
         {isExpanded && (
           <span className="text-gray-500">
@@ -66,8 +71,10 @@ const HadithBooks = ({ data, navigate, currentBook }: HadithBooksProps) => {
           <div className="flex flex-col max-h-[65vh] overflow-y-auto ">
             {filteredBooks().map((book: any) => (
               <div
-                className={`flex flex-row hover:bg-blue-100 p-[2px] px-2 rounded-md hover:shadow-md text-sm cursor-pointer   ${
-                  currentBook === data.id + book.id ? 'bg-blue-200' : ''
+                className={`flex flex-row  p-[2px] px-2 rounded-md hover:shadow-md text-sm cursor-pointer   ${
+                  currentBook === data.id + book.id
+                    ? 'bg-blue-400 text-white'
+                    : 'text-gray-900 hover:bg-blue-100'
                 }  `}
                 key={book.id}
                 onClick={(e) => {

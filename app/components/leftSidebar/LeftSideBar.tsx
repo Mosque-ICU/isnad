@@ -24,7 +24,7 @@ type LeftSideBarProps = {
 function LeftSideBar({ children }: LeftSideBarProps) {
   const [showSidebar, setShowSidebar] = React.useState(true);
   const [showMobileSidebar, setShowMobileSidebar] = React.useState(false);
-  const [currentBook, setCurrentBook] = React.useState<any>(null);
+  const [currentBook, setCurrentBook] = React.useState<any>('0');
   const router = useRouter();
 
   //hide sidebar on mobile

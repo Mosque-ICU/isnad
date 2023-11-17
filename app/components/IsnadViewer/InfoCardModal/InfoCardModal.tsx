@@ -4,6 +4,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Flex, Button, TextInput, Badge, BarList, Text } from '@tremor/react';
 import ScholarInfo, { ScholarData } from './ScholarInfo';
 import InfoCardFooter from './InfoCardFooter';
+import { addCacheValue, getCacheValue } from '../../../_lib/cache';
 import { ScholarNodeData } from '../IsnadViewer';
 
 type InfoCardProps = {
@@ -22,10 +23,20 @@ const InfoCardModal = ({ data, closeModal }: InfoCardProps) => {
   }, [data]);
 
   const fetchScholarData = async (id: number) => {
-    const request = await fetch('/api/muslim-scholar?id=' + id).then((res) =>
-      res.text()
-    );
+    //check if cached
     try {
+      const cachedValue = await getCacheValue('/api/muslim-scholar?id=' + id);
+      if (cachedValue) {
+        setScholarData(parseScholarHtml(cachedValue, data, setLoading));
+        return;
+      }
+
+      const request = await fetch('/api/muslim-scholar?id=' + id).then((res) =>
+        res.text()
+      );
+
+      addCacheValue(request, '/api/muslim-scholar?id=' + id);
+
       //parse html to dom
       setScholarData(parseScholarHtml(request, data, setLoading));
     } catch (e) {

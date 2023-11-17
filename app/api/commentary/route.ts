@@ -20,7 +20,7 @@ export const GET = async (req: Request, res: Response) => {
     //Get commentary
 
     const c = await conn.execute(
-      `SELECT id, commentaryId, hadithId, englishText, arabicText FROM commentary WHERE commentaryId = ? AND hadithId = ?`,
+      `SELECT id, commentaryId, hadithId, englishText, arabicJson, arabicText FROM commentary WHERE commentaryId = ? AND hadithId = ?`,
       [commentaryId, hadithId]
     );
 
